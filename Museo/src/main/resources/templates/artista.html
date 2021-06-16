@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/artista.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Museo arte contemporanea</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<header th:replace="fragments/base.html :: header"></header>
+	<section>
+		<div id="flex-containerTesto">
+			<p1>
+			<strong><div class="Nome_Autore" th:if="${artista}"
+					th:object="${artista}" th:text="|*{nome} *{cognome}|">Nome Cognome</div></strong></p1>
+			<p2>
+			<div class="testo" th:text="${artista.biografia}">Biografia
+				Artista</div>
+			</p2>
+		</div>
+		<div id="flex-containerProfiloAutore">
+			<div class="informazioniAutore" th:object="${artista}">
+				<div id="immagineArtista">
+					<img th:src="@{'/images/artisti/' + *{nome} + '_' + *{cognome} + '.jpg'}" width=330px height=430px/>
+				</div>
+				<div class="Nome" th:object="${artista}">
+					<p3> <strong>Nome: </strong></p3>
+					<p4>
+					<span th:text="*{nome}"></span></p4>
+				</div>
+				<div class="Cognome" th:object="${artista}">
+					<p3> <strong>Cognome: </strong></p3>
+					<p4>
+					<span th:text="*{cognome}"></span></p4>
+				</div>
+				<div class="Data_di_nascita" th:object="${artista}">
+					<p3> <strong>Data di nascita: </strong></p3>
+					<p4>
+					<span th:text="*{dataDiNascita}"></span></p4>
+				</div>
+				<div class="Luogo_di_nascita" th:object="${artista}">
+					<p3> <strong>Luogo di nascita: </strong></p3>
+					<p4>
+					<span th:text="*{postoDiNascita}"></span></p4>
+				</div>
+				<div class="Data_di_morte" th:object="${artista}">
+					<p3> <strong>Data di morte: </strong></p3>
+					<p4>
+					<span th:if="*{dataDiMorte}" th:text="*{dataDiMorte}"></span> <span
+						th:unless="*{dataDiMorte}">Vivo</span> </p4>
+				</div>
+				<div class="Luogo_di_morte" th:object="${artista}">
+					<p3> <strong>Luogo di morte: </strong></p3>
+					<p4>
+					<span th:if="*{postoDiMorte}" th:text="*{postoDiMorte}"></span> <span
+						th:unless="*{postoDiMorte}">Vivo</span> </p4>
+				</div>
+				<div class="Nazionalità" th:object="${artista}">
+					<p3> <strong>Nazionalità: </strong></p3>
+					<p4>
+					<span th:text="*{nazionalita}"></span></p4>
+				</div>
+			</div>
+		</div>
+		<div class="preOpere">
+			<p4></p4>
+		</div>
+		<div id="Opere">
+			<div class="AltreOpere" th:object="${artista}">
+				<center>
+					<strong><p5>Opere di <span
+							th:text="|*{nome} *{cognome}|"></span></p5></strong>
+				</center>
+			</div>
+			<div id="flex-containerOpere">
+				<div id="OperaCompleta" th:object="${opera}"
+					th:each="opera: ${opere}">
+					<div id="Opera"> <a href="opera.html"
+							th:href="@{'/opera/' + ${opera.id}}">
+						<img th:src="@{'/images/opere/' + ${artista.nome} + '_' + ${artista.cognome} + '_' + ${opera.titolo} + '.jpg'}" width=300px height=400px /></a>
+					</div>
+					<div class="Titolo">
+						<p2> "<a href="opera.html"
+							th:href="@{'/opera/' + ${opera.id}}" th:text="*{titolo}"></a>"</p2>
+					</div>
+				</div>
+			</div>
+			<div class="elemento">
+			<div>
+				<p3></p3>
+			</div>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

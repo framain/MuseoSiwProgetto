@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/registraUtente.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title th:text="${title}"></title>
+</head>
+<body>
+		<nav th:replace="fragments/autenticazione.html :: navigationAutenticazione"></nav>
+	<section>
+	<div class="modulo">
+    	<p1><center><strong>Modulo registrazione</strong></center></p1>
+	<form th:action="@{/register}" method="POST">
+	<div class ="elementoContainer">
+        <div  class="elemento">
+            <span class="elemento">Username</span>
+            <span><input type="text" placeholder="Username" required
+                       th:field="${credentials.username}"/></span>
+            <span th:if="${#fields.hasErrors('credentials.username')}"
+                th:errors="${credentials.username}" th:style="'color:red'"></span>
+        </div>
+        <div  class="elemento">
+            <span class="elemento">Password</span>
+            <span><input type="password" placeholder="Password" required
+                       th:field="${credentials.password}"/></span>
+            <span th:if="${#fields.hasErrors('credentials.password')}"
+                th:errors="${credentials.password}" th:style="'color:red'"></span>
+        </div>
+        <div  class="elemento">
+            <span class="elemento">Nome</span>
+            <span><input type="text" placeholder="Nome" required
+                       th:field="${user.nome}"/></span>
+            <span th:if="${#fields.hasErrors('user.nome')}"
+                th:errors="${user.nome}" th:style="'color:red'"></span>
+        </div>
+        <div  class="elemento">
+            <span class="elemento">Cognome</span>
+            <span><input type="text" placeholder="Cognome" required
+                       th:field="${user.cognome}"/></span>
+            <span th:if="${#fields.hasErrors('user.cognome')}"
+                th:errors="${user.cognome}" th:style="'color:red'"></span>
+        </div>
+        <div>
+            <div class="elemento">
+                <button type="Submit">Registra</button>
+            </div>
+        </div>
+        </div>
+	</form>
+	</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/loginForm.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<nav
+		th:replace="fragments/autenticazione.html :: navigationAutenticazione"></nav>
+	<section>
+			<div>
+				<p1><strong><center>Modulo login</center></strong></p1>
+			</div>
+			<form th:action="@{/login}" method="POST">
+				<div>
+					<div class="elemento">
+						<span class="elemento">Username:</span> <span><input name="username"
+							type="text" required /></span>
+					</div>
+					<div class="elemento">
+						<span class="elemento">Password:</span> <span><input name="password"
+							type="password" required /></span>
+					</div>
+					<div class="elemento">
+						<span><button type="submit">Login</button></span>
+					</div>
+				</div>
+			</form>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

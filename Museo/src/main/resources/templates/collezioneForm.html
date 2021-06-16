@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/formCollezione.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Modifica Collezione</title>
+</head>
+<body>
+<nav th:replace="fragments/autenticazione.html :: navigationAutenticazione"></nav>
+	<section>
+	<div class="modifica">
+		<p1><center><strong>Modifica i dati della collezione "<span th:object="${collezione}" th:text="*{nome}"></span>"</strong></center></p1>
+	</div>
+	<form th:action="@{/formCollezione}" th:object="${collezione}" method="POST">
+		<div class="elementoContainer">
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{id}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{curatore}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Nome:</span> <span><input type="text" th:field="*{nome}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Descrizione:</span> <span><input type="text" th:field="*{descrizione}" th:style="'color:grey'"/></span>
+			</div>
+			<div class="elemento">
+				<span><button type="submit">Modifica</button></span>
+			</div>
+		</div>
+	</form>
+	</section>
+</body>
+<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</html>

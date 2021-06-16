@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/opera.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Museo arte contemporanea</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<header th:replace="fragments/base.html :: header"> </header>
+	<section>
+		<div id="containerGenerale">
+			<div id="flex-containerTesto">
+				<div class=Nome_Opera th:if="${opera}" th:object="${opera}">
+					<p1> <strong><div id="titolo" th:text="*{titolo}"></div></strong></p1>
+					<p2>
+					<div class="descrizione" th:text="*{descrizione}">Descrizione
+						opera</div>
+					</p2>
+				</div>
+			</div>
+			<div id="flex-containerOpera"  th:object="${opera}">
+				<div class="informazioniOpera">
+					<div id="immagineOpera">
+						<img th:src="@{'/images/opere/' + *{artista.nome} + '_' + *{artista.cognome} + '_' + *{titolo} + '.jpg'}" width=100% height=100%/>
+					</div>
+					<div class="Autore">
+						<p3><a href="artista.html" th:href="@{'/artista/' + *{artista.id}}"
+							th:text="|*{artista.nome} *{artista.cognome}|">Nome Cognome</a></p3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

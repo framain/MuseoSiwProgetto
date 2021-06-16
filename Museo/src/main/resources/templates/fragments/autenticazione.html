@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerfiles(title)">
+<meta charset="UTF-8" />
+<link th:href="@{/css/base.css}" rel="stylesheet">
+<title th:text="${title}"></title>
+</head>
+<body>
+	<nav th:fragment="navigationAutenticazione">
+		<div id="flex-containerNav">
+			<div class="navigation">
+				<a th:href="@{'/'}"><strong>MUSEO ARTE CONTEMPORANEA</strong></a>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>
+

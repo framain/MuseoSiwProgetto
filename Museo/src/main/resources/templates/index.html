@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{/css/index.css}">
+<title>Museo arte contemporanea</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<header th:replace="fragments/base.html :: header"></header>
+	<section>
+		<div id="flex-containerSection">
+			<div class="sec">
+				<a th:object="${opera}" href="opera.html" th:href="@{'/opera/12'}">
+					<img id="immagine2"
+					th:src="@{'images/opere/Jeff_Koons_Balloon dog.jpg'}" width=100%
+					height=100% />
+				</a>
+				<p2> <strong><span id="titolo2"><a
+						th:object="${opera}" href="opera.html" th:href="@{'/opera/12'}">Balloon
+							Dog</a> (<a th:object="${artista}" href="artista.html"
+						th:href="@{'/artista/11'}">Jeff Koons</a>, 1990)</span></strong></p2>
+			</div>
+			<div class="sec">
+				<a th:object="${opera}" href="opera.html" th:href="@{'/opera/15'}">
+					<img id="immagine1"
+					th:src="@{'images/opere/Banksy_(Identità ignota)_There always hope.jpg'}"
+					width=100% height=100% />
+				</a>
+				<p2> <strong><span id="titolo1"><a
+						th:object="${opera}" href="opera.html" th:href="@{'/opera/15'}">
+							There is always hope</a> (<a th:object="${artista}"
+						href="artista.html" th:href="@{'/artista/14'}">Bansky</a>, 2002)</span></strong></p2>
+			</div>
+		</div>
+		<div class="intermezzo"></div>
+		<div id="flex-containerSection">
+			<div class="sec">
+				<a href="opera.html" th:href="@{'/opera/9'}"> <img
+					id="immagine2"
+					th:src="@{'images/opere/Andy_Warhol_Playboy Magazine 1986.jpg'}"
+					width=100% height=100% /></a>
+				<p2> <strong><span id="titolo2" th:object="${opera}"><a
+						href="opera.html" th:href="@{'/opera/9'}">Playboy Magazine
+							1986</a>, <a th:object="${artista}" href="artista.html"
+						th:href="@{'/artista/7'}">Warhol</a></span></strong></p2>
+			</div>
+			<div class="sec">
+				<a th:object="${opera}" href="opera.html" th:href="@{'/opera/13'}">
+					<img id="immagine1" th:src="@{'images/opere/Jeff_Koons_Puppy.jpg'}"
+					width=100% height=100% />
+				</a>
+				<p2> <strong><span id="titolo3"><a
+						th:object="${opera}" href="opera.html" th:href="@{'/opera/13'}">Puppy</a>
+						(<a th:object="${artista}" href="artista.html"
+						th:href="@{'/artista/11'}">Jeff Koons</a>, 1992)</span></strong></p2>
+			</div>
+		</div>
+		<div class="elemento">
+			<div>
+				<p1></p1>
+			</div>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"> </footer>
+</body>
+</html>

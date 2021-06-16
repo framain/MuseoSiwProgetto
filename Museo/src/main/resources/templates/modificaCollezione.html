@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/modificaCollezione.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Modifica Collezione</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<section>
+		<div>
+			<p1> <strong><center>
+					<p1>Scegli la collezione da modificare: 
+				</center></strong></p1>
+			<ul>
+				<p3>
+				<div class="listaCollezioni" ><li th:each="collezione : ${collezioni}"><a th:href="@{'/formCollezione/' + ${collezione.id}}" 
+				th:text="${collezione.nome}">Nome della collezione</a>, a cura di <span><a th:href="@{'/formCuratore/' + ${collezione.curatore.id}}"
+				th:text="|${collezione.curatore.nome} ${collezione.curatore.cognome}|">Nome e Cognome del curatore</a></span></li>
+				</div>
+				</p3>
+			</ul>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

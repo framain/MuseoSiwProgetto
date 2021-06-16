@@ -1,0 +1,249 @@
+body {
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+#flex-containerNav {
+	display: flex;
+	padding: 26.7px;
+	justify-content: space-between;
+}
+
+div.navigation {
+	margin-left: 20px;
+}
+
+#autenticazione {
+	position: right;
+}
+
+span.login {
+	margin-right: 30px;
+}
+
+span.admin {
+	margin-right: 30px;
+}
+
+#autenticazione a{
+	color: white;
+}
+
+#autenticazione a:hover {
+	color: black;	
+	text-decoration: underline;
+}
+
+#flex-containerHeader {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#containerGenerale {
+	display: flex;
+	flex-direction: column;
+}
+
+#flex-containerTesto {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+#flex-containerOpera {
+	display: flex;
+}
+
+#flex-containerFooter {
+	display: flex;
+	padding: 20px;
+	justify-content: space-around;
+}
+
+#immagineOpera {
+  background-size: 60%;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 500px;
+  margin-top: -170px;
+  margin-left: 150px;
+  
+}
+
+nav {
+	color: white;
+	font-family: Helvetiva;
+	font-size: 20px;
+	height: 80px;
+	background-color: #990000;
+}
+
+div.informazioniOpera {
+	height: 300px;
+}
+
+div.Nome_Opera {
+	margin-top: 0px;
+	margin-left: 60px;
+}
+
+div.Autore {
+  margin-top: -120px;
+  margin-left: 270px;
+}
+
+p {
+	font-family: cursive;
+	font-size: 20px;
+	text-align: center;
+}
+
+header {
+	background-color: #cccccc;
+	height: 60px;
+}
+
+section {
+	background-color: white;
+	margin-left: 150px;
+	margin-top: 80px;
+	margin-right: 150px;
+	height: 500px;
+}
+
+div.descrizione {
+	margin-top: 30px;
+	margin-left: 0px;
+	margin-right: 600px;
+}
+
+div.col {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	font-family: garamond;
+}
+
+div.PreSec {
+	margin-top: 25px;
+}
+
+div.sec {
+	margin-top: 30px;
+	margin-left: 25px;
+	margin-right: 530px;
+	height: 500px;
+}
+
+div.informazioniOpera {
+  margin-top: -150px;
+  margin-left: 670px;
+  height: 40px;
+}
+
+div.Pre_extra {
+	margin-left: 850px;
+	margin-right: 60px;
+	margin-top: -1560px;
+	background-color: white;
+	border-left: 2px solid lightgrey;
+}
+
+div.extra {
+	margin-left: 850px;
+	margin-right: 60px;
+	height: 420px;
+	background-color: white;
+	border-left: 2px solid lightgrey;
+}
+
+p1 {
+	font-family: garamond;
+	margin-left: 25px;
+	font-size: 40px;
+}
+
+p2 {
+	font-family: garamond;
+	font-size: 20px;
+}
+
+p3 {
+	font-family: garamond;
+	font-size: 20px;
+}
+
+p4 {
+	font-size: 16px;
+	margin-left: 20px;
+	font-family: helvetica;
+}
+
+p5 {
+	font-size: 14px;
+	font-family: helvetica;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+img {
+	margin-top: 15px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	height: 350px;
+}
+
+div.fine {
+	background-color: #f2f2f2;
+	height: 100px;
+}
+
+div#flex-containerHeader a {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.navigation a:visited {
+	color: white;
+}
+
+div.navigation a:hover {
+	color: white;
+}
+
+div.col a:hover {
+	color: #8b0000;
+}
+
+a:hover, a:active {
+	color: #8b0000;
+}
+
+a:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
+
+div.Autore a:hover {
+	color : #8b0000;
+	text-decoration: underline;
+}
+
+
+footer {
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+	height: 60px;
+	color: white;
+}

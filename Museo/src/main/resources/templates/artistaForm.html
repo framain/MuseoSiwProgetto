@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/formArtista.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Modifica Artista</title>
+</head>
+<body>
+<nav th:replace="fragments/autenticazione.html :: navigationAutenticazione"></nav>
+	<section>
+	<div class="modifica">
+		<p1><center><strong>Modifica i dati dell'artista "<span th:object="${artista}" th:text="|*{nome} *{cognome}|"></span>"</strong></center></p1>
+	</div>
+	<form th:action="@{/formArtista}" th:object="${artista}" method="POST">
+		<div class="elementoContainer">
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{id}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{opera}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Nome:</span> <span><input type="text" th:field="*{nome}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Cognome:</span> <span><input type="text" th:field="*{cognome}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Data di nascita:</span> <span><input type="date" th:field="*{dataDiNascita}" th:style="'color:grey'"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Luogo di nascita:</span> <span><input type="text" th:field="*{postoDiNascita}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('postoDiNascita')}" th:errors="*{postoDiNascita}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Nazionalità:</span> <span><input type="text" th:field="*{nazionalita}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('nazionalita')}" th:errors="*{nazionalita}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Data di morte:</span> <span><input type="date" th:field="*{dataDiMorte}" th:style="'color:grey'"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Luogo di morte:</span> <span><input type="text" th:field="*{postoDiMorte}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('postoDiMorte')}" th:errors="*{postoDiMorte}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Biografia:</span> <span ><textarea rows="9" cols="90" name="text" th:field="*{biografia}" th:style="'color:grey'"></textarea></span>
+				<span th:if="${#fields.hasErrors('biografia')}" th:errors="*{biografia}" ></span>
+			</div>
+			<div class="elemento">
+				<span><button type="submit">Modifica</button></span>
+			</div>
+			<div class="elemento">
+				<div><p1></p1></div>
+			</div>
+		</div>
+	</form>
+	</section>
+</body>
+<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</html>

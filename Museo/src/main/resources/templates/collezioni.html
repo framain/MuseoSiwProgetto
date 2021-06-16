@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/collezioni.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>collezioni</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<header th:replace="fragments/base.html :: header"></header>
+	<section>
+		<div class="listaCollezioni">
+			<p1>
+			<strong><center>
+					<p1>Le nostre collezioni:
+				</center></strong></p1>
+			<ul>
+				<p3>
+				<li th:each="collezione : ${collezioni}"><a
+					href="collezione.html"
+					th:href="@{'/collezione' + '/' + ${collezione.id}}"
+					th:text="|${collezione.nome}">Nome Collezione</a></li>
+				</p3>
+			</ul>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

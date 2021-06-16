@@ -1,0 +1,298 @@
+body {
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+#flex-containerNav {
+	display: flex;
+	padding: 26.7px;
+	justify-content: space-between;
+}
+
+#autenticazione {
+	position: right;
+}
+
+span.login {
+	margin-right: 30px;
+}
+
+span.admin {
+	margin-right: 30px;
+}
+
+#autenticazione a {
+	color: white;
+}
+
+#autenticazione a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+#flex-containerHeader {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#flex-containerPreSection {
+	display: flex;
+}
+
+#flex-containerSection {
+	display: flex;
+	justify-content: space-between;
+}
+
+#flex-containerContenutiExtra {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#flex-containerFooter {
+	display: flex;
+	padding: 20px;
+	justify-content: space-around;
+}
+
+div.navigation {
+	margin-left: 20px;
+}
+
+#immagine1 {
+	margin-top: 40px;
+}
+
+#titolo1 {
+	margin-left: 8%;
+}
+
+div.intermezzo {
+	height: 2px;
+	width: 90%;
+	background-color: lightgrey;
+	margin-top: 3%;
+	margin-left: 50px;
+}
+
+#immagine2 {
+	margin-top: 40px;
+}
+
+#titolo2 {
+	margin-left: 12%;
+}
+
+#immagine3 {
+	margin-top: 15px;
+	margin-left: 170px;
+	height: 510px;
+}
+
+#titolo3 {
+	margin-left: 22%;
+}
+
+#onionSoup {
+	margin-top: 1px;
+	margin-bottom: 2px;
+	margin-left: 50px;
+}
+
+#onionTitolo {
+	margin-left: 60px;
+}
+
+div.intermezzo2 {
+	height: 2px;
+	width: 280px;
+	background-color: lightgrey;
+	margin-left: 870px;
+}
+
+#playBoy {
+	margin-top: 30px;
+	margin-left: 50px;
+	margin-bottom: 2px;
+}
+
+#playboyTitolo {
+	margin-left: 23px;
+}
+
+nav {
+	color: white;
+	font-family: Helvetiva;
+	font-size: 20px;
+	height: 80px;
+	background-color: #990000;
+}
+
+p {
+	font-family: cursive;
+	font-size: 20px;
+	text-align: center;
+}
+
+header {
+	background-color: #cccccc;
+	height: 60px;
+}
+
+section {
+	background-color: white;
+	margin-left: 150px;
+	margin-top: 80px;
+	margin-right: 150px;
+	height: 100%;
+}
+
+div.col {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	font-family: garamond;
+}
+
+div.PreSec {
+	margin-top: 25px;
+}
+
+div.sec {
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 100%;
+	width: 100%;
+}
+
+div.Pre_extra {
+	margin-left: 850px;
+	margin-right: 60px;
+	margin-top: -1560px;
+	background-color: white;
+	border-left: 2px solid lightgrey;
+}
+
+div.extra {
+	margin-left: 850px;
+	margin-right: 60px;
+	height: 420px;
+	background-color: white;
+	border-left: 2px solid lightgrey;
+}
+
+p1 {
+	font-family: garamond;
+	margin-left: 25px;
+	font-size: 25px;
+}
+
+p2 {
+	font-family: garamond;
+	font-size: 20px;
+}
+
+p3 {
+	font-family: garamond;
+	font-size: 18px;
+}
+
+p4 {
+	font-size: 20px;
+	margin-left: 20px;
+	font-family: garamond;
+}
+
+p5 {
+	font-size: 20px;
+	font-family: garamond;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+img {
+	margin-top: 15px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	height: 350px;
+	width: 300px;
+}
+
+div.fine {
+	background-color: #f2f2f2;
+	height: 100px;
+}
+
+div#flex-containerHeader a {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.navigation a:visited {
+	color: white;
+}
+
+div.navigation a:hover {
+	color: white;
+}
+
+div.col a:hover {
+	color: #8b0000;
+}
+
+a:hover, a:active {
+	color: #8b0000;
+}
+
+a:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
+
+#titolo2 a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+#titolo1 a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+#titolo3 a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+#onionTitolo a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+#playboyTitolo a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+#playboyTitolo a {
+	color: black;
+}
+
+footer {
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+	height: 60px;
+	color: white;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/artisti.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Lista artisti</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<header th:replace="fragments/base.html :: header"></header>
+	<section>
+		<div class="listaArtisti">
+			<p1><strong><center>I nostri artisti:</center></strong></p1>
+			<ul>
+				<p3><li th:each="artista : ${artisti}"><a href="artista.html"
+					th:href="@{'/artista' + '/' + ${artista.id}}"
+					th:text="|${artista.nome} ${artista.cognome}|">Nome Cognome</a></li></p3>
+			</ul>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

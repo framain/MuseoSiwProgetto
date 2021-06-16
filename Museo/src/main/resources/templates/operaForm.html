@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/formOpera.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Modifica Opera</title>
+</head>
+<body>
+<nav th:replace="fragments/autenticazione.html :: navigationAutenticazione"></nav>
+	<section>
+	<div class="modifica">
+		<p1><center><strong>Modifica i dati dell'opera "<span th:object="${opera}" th:text="${opera.titolo}"></span>"</strong></center></p1>
+	</div>
+	<form th:action="@{/formOpera}" th:object="${opera}" method="POST">
+		<div class="elementoContainer">
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{id}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{artista}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{collezione}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Titolo:</span> <span><input type="text" th:field="*{titolo}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('titolo')}" th:errors="*{titolo}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Anno di realizzazione:</span> <span><input type="text" th:field="*{annoRealizzazione}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('annoRealizzazione')}" th:errors="*{titolo}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Descrizione:</span> <span ><textarea rows="9" cols="90" name="text" th:field="*{descrizione}" th:style="'color:grey'"></textarea></span>
+			</div>
+			<div class="elemento">
+				<span><button type="submit">Modifica</button></span>
+			</div>
+			<div class="elemento">
+				<div><p1></p1></div>
+			</div>
+		</div>
+	</form>
+	</section>
+</body>
+<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</html>

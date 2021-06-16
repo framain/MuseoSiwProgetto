@@ -1,0 +1,253 @@
+body {
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+#flex-containerNav {
+	display: flex;
+	padding: 26.7px;
+	justify-content: space-between;
+}
+
+div.navigation {
+	margin-left: 20px;
+}
+
+#autenticazione {
+	position: right;
+}
+
+span.login {
+	margin-right: 30px;
+}
+
+span.admin {
+	margin-right: 30px;
+}
+
+#autenticazione a {
+	color: white;
+}
+
+#autenticazione a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+#flex-containerHeader {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#flex-containerPreSection {
+	display: flex;
+}
+
+#flex-containerSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#flex-containerContenutiExtra {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#flex-containerFooter {
+	display: flex;
+	padding: 20px;
+	justify-content: space-around;
+}
+
+div#flex-containerHeader ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+div#flex-containerHeader li:hover {
+	float: left;
+	margin: 0;
+	padding: 0;
+	color: black;
+	text-decoration: underline;
+}
+
+div#flex-containerHeader li ul {
+	display: none;
+}
+
+div#flex-containerHeader li:hover ul {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 150px;
+	padding: 0;
+	margin-top: 10px;
+	margin: 0 0 0 -1px;
+	border: 1px solid black;
+	background: #b8b894;
+	text-decoration: underline;
+}
+
+div#flex-containerHeader li li {
+	border: none;
+	width: 150px;
+}
+
+div#flex-containerHeader li li a {
+	padding: 2px 2px 2px -10px;
+}
+
+nav {
+	color: white;
+	font-family: Helvetiva;
+	font-size: 20px;
+	height: 80px;
+	background-color: #990000;
+}
+
+header {
+	background-color: #cccccc;
+	height: 60px;
+}
+
+section {
+	background-color: white;
+	margin-left: 150px;
+	margin-top: 80px;
+	margin-right: 150px;
+	height: 405px;
+}
+
+div.col {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	font-family: garamond;
+}
+
+div.PreSec {
+	margin-top: 25px;
+}
+
+div.sec {
+	margin-top: 30px;
+	margin-left: 25px;
+	margin-right: 530px;
+	height: 500px;
+}
+
+div.Pre_extra {
+	margin-left: 850px;
+	margin-right: 60px;
+	margin-top: -1560px;
+	background-color: white;
+	border-left: 2px solid lightgrey;
+}
+
+div.extra {
+	margin-left: 850px;
+	margin-right: 60px;
+	height: 420px;
+	background-color: white;
+	border-left: 2px solid lightgrey;
+}
+
+p1 {
+	font-family: garamond;
+	margin-top: 25px;
+	margin-left: 25px;
+	font-size: 22px;
+}
+
+p2 {
+	font-family: garamond;
+	font-size: 20px;
+}
+
+p3 {
+	font-family: garamond;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+p4 {
+	font-size: 16px;
+	margin-left: 20px;
+	font-family: garamond;
+}
+
+p5 {
+	font-size: 14px;
+	font-family: garamond;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+img {
+	margin-top: 15px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	height: 350px;
+}
+
+div.fine {
+	background-color: #f2f2f2;
+	height: 100px;
+}
+
+div#flex-containerHeader a {
+	text-decoration: none;
+}
+
+div#Museo {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.navigation a:visited {
+	color: white;
+}
+
+div.navigation a:hover {
+	color: white;
+}
+
+div.col a:hover {
+	color: #8b0000;
+}
+
+div.listaCollezioni a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #8b0000;
+}
+
+a:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
+
+footer {
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+	height: 60px;
+	color: white;
+}

@@ -1,0 +1,281 @@
+body {
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+#flex-containerNav {
+	display: flex;
+	padding: 26.7px;
+	justify-content: space-between;
+}
+
+div.navigation {
+	margin-left: 20px;
+}
+
+#autenticazione {
+	position: right;
+}
+
+span.login {
+	margin-right: 30px;
+}
+
+span.admin {
+	margin-right: 30px;
+}
+
+#autenticazione a {
+	color: white;
+}
+
+#autenticazione a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+#flex-containerHeader {
+	display: flex;
+	justify-content: space-around;
+}
+
+#flex-containerCollezioni {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+#Opere {
+	display: flex;
+	justify-content: space-around;
+}
+
+#Opera2Completa {
+	display: flex;
+	flex-direction: column;
+}
+
+#Opera4Completa {
+	display: flex;
+	flex-direction: column;
+}
+
+#Opera1Completa {
+	display: flex;
+	flex-direction: column;
+}
+
+#Opera3Completa {
+	display: flex;
+	flex-direction: column;
+}
+
+#Opera5Completa {
+	display: flex;
+	flex-direction: column;
+}
+
+#Opera6Completa {
+	display: flex;
+	flex-direction: column;
+}
+
+#flex-containerOpere1 {
+	display: flex;
+	justify-content: space-between;
+}
+
+#flex-containerOpere2 {
+	display: flex;
+	justify-content: space-around;
+}
+
+#Opera1 {
+	background-size: 70%;
+	background-repeat: no-repeat;
+	margin-top: 120px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+	width: 300px;
+	height: 350px;
+}
+
+#Opera2 {
+	background-image:
+		url(https://i2.wp.com/dueminutidiarte.com/wp-content/uploads/2015/02/magritte_gli-amanti.jpg?ssl=1);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-bottom: 40px;
+	width: 350px;
+	height: 200px;
+}
+
+#Opera3 {
+	background-image:
+		url(https://www.deodato.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/w/a/warhol-onion_soup-mixed_media_on_canva-100x70cm-__mg_8132_-2000x72dpi.jpg);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	margin-top: 50px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	width: 300px;
+	height: 430px;
+}
+
+#Opera4 {
+	background-image:
+		url(https://www.deodato.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/w/a/warhol_playboy_2_2.jpg);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	margin-top: 90px;
+	margin-left: 70px;
+	margin-bottom: 10px;
+	width: 300px;
+	height: 300px;
+}
+
+#Opera5 {
+	background-image:
+		url(https://libreriamo.it/wp-content/uploads/2015/02/warhol_banana.jpg);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	margin-top: 100px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	width: 300px;
+	height: 270px;
+}
+
+#Opera6 {
+	background-image:
+		url(https://www.moma.org/media/W1siZiIsIjcwNjE5Il0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d.jpg?sha=e054a39456dbaa70);
+	background-size: 80%;
+	background-repeat: no-repeat;
+	margin-top: 90px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	width: 300px;
+	height: 265px;
+}
+
+#flex-containerFooter {
+	display: flex;
+	padding: 20px;
+	justify-content: space-around;
+}
+
+nav {
+	color: white;
+	font-family: Helvetiva;
+	font-size: 20px;
+	height: 80px;
+	background-color: #990000;
+}
+
+header {
+	background-color: #cccccc;
+	height: 60px;
+}
+
+section {
+	background-color: white;
+	margin-left: 150px;
+	margin-top: 80px;
+	margin-right: 150px;
+	height: 770px;
+	background-color: white;
+}
+
+div.col {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	font-family: garamond;
+}
+
+div.Nome_Collezione {
+	margin-top: 40px;
+	margin-left: 60px;
+}
+
+div.Titolo {
+	margin-top: -20px;
+}
+
+.curatore {
+	margin-top: 110px;
+}
+
+p1 {
+	font-family: garamond;
+	font-size: 45px;
+}
+
+p2 {
+	font-family: garamond;
+	font-size: 20px;
+}
+
+p3 {
+	font-family: garamond;
+	font-size: 17px;
+}
+
+p4 {
+	font-family: garamond;
+	font-size: 15px;
+}
+
+p5 {
+	font-family: garamond;
+	font-size: 25px;
+}
+
+div.fine {
+	background-color: #f2f2f2;
+	height: 100px;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.navigation a:visited {
+	color: white;
+}
+
+div.navigation a:hover {
+	color: white;
+}
+
+div.col a:hover {
+	color: #8b0000;
+}
+
+a:hover, a:active {
+	color: #8b0000;
+}
+
+a:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
+
+div.Titolo a:hover {
+	color: #8b0000;
+	text-decoration: underline;
+}
+
+footer {
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+	height: 60px;
+	color: white;
+}

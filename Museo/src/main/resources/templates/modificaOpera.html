@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/modificaOpera.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Modifica Opera</title>
+</head>
+<body>
+	<nav th:replace="fragments/base.html :: navigation"></nav>
+	<section>
+		<div>
+			<p1> <strong><center>
+					<p1>Scegli l'opera da modificare: 
+				</center></strong></p1>
+			<ul>
+				<p3>
+				<div class="listaCollezioni"><li th:each="opera : ${opere}"><a href="operaForm.html" th:href="@{'/formOpera/' + ${opera.id}}" 
+				th:text="${opera.titolo}">Nome dell'opera</a>, dell'artista <span><a href="artistaForm.html" th:href="@{'/formArtista/' + ${opera.artista.id}}"
+				th:text="|${opera.artista.nome} ${opera.artista.cognome}|">Nome dell'artista</a></span></li>
+				</div>
+				</p3>
+			</ul>
+		</div>
+	</section>
+	<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/formCuratore.css}" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Modifica Curatore</title>
+</head>
+<body>
+<nav th:replace="fragments/autenticazione.html :: navigationAutenticazione"></nav>
+	<section>
+	<div class="modifica">
+		<p1><center><strong>Modifica i dati del curatore "<span th:object="${curatore}" th:text="|*{nome} *{cognome}|"></span>"</strong></center></p1>
+	</div>
+	<form th:action="@{/formCuratore}" th:object="${curatore}" method="POST">
+		<div class="elementoContainer">
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{id}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{matricola}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento"></span><span><input type="hidden" th:field="*{collezioni}"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Nome: </span> <span><input type="text" th:field="*{nome}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Cognome: </span> <span><input type="text" th:field="*{cognome}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Data di nascita:</span> <span><input type="date" th:field="*{dataDiNascita}" th:style="'color:grey'"/></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Luogo di nascita: </span> <span><input type="text" th:field="*{luogoDiNascita}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('luogoDiNascita')}" th:errors="*{luogoDiNascita}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Email: </span> <span><input type="text" th:field="*{email}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" ></span>
+			</div>
+			<div class="elemento">
+				<span class="elemento">Telefono: </span> <span><input type="text" th:field="*{telefono}" th:style="'color:grey'"/></span>
+				<span th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}" ></span>
+			</div>
+			<div class="elemento">
+				<span><button type="submit">Modifica</button></span>
+			</div>
+		</div>
+	</form>
+	</section>
+</body>
+<div class="fine">
+		<p4></p4>
+	</div>
+	<footer th:replace="fragments/base.html :: footer"></footer>
+</html>
